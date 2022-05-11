@@ -11,12 +11,22 @@
 </head>
 <body>
   <header class="container">
-    <img class="logo" src="assets/logo_hmif.png" alt="">
-    <nav>
+    <div id="nav-left">
+      <img class="logo" src="assets/logo_hmif.png" alt="">
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars" id="fa-bars"></i>
+      </button>
+      <button class="close-hamburger" id="close-hamburger">
+        <i class="fas fa-times" id="fa-bars"></i>
+      </button>
+    </div>
+    <nav class="nav-list" id="nav-list">
       <ul>
-        <li><a href="home.html">Beranda</a></li>
+        <li><a href="home.html" class="active">Beranda</a></li>
         <li><a href="divisi.html">Divisi</a></li>
         <li><a href="kalender.html">Kalender</a></li>
+        <li><a href="kotaksaran.html">Kotak Saran</a></li>
       </ul>
       <button>
         Login
@@ -24,9 +34,13 @@
     </nav>
   </header>
   <section class="hero-section container">
+    <div class="hero-background">
+      <video autoplay="" loop="" class="hero__background-video hero__background-video--light">
+        <source src="assets/video-bg-light.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="hero-left">
-      tes
-      <h1>Himpunan Mahasiswa Informatika</h1>
+      <h1>Himpunan<br>Mahasiswa<br>Informatika</h1>
       <div class="tagline">
         <span>‘‘</span>
         <p>Informatika Beda! Informatika Satu! <br>
@@ -34,6 +48,15 @@
         </p>
       </div>
     </div>
+    <div class="hero-right">
+      <img src="assets/logo_hmif.png" alt="">
+      <img src="assets/logo_ifunram.png" alt="">
+      <img src="assets/logo_unram.png" alt="">
+    </div>
   </section>
+  <section class="leader-section container">
+    <div class="leader-background"></div>
+  </section>
+  <script src="script.js"></script>
 </body>
 </html>
