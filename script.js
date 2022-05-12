@@ -7,6 +7,9 @@ const modal = document.getElementById("login-modal");
 const loginBtn = document.getElementById("button-login");
 const closeModal = document.getElementsByClassName("close")[0];
 const body = document.getElementsByTagName("BODY")[0];
+var isMobile =
+	Math.min(window.screen.width, window.screen.height) < 768 ||
+	navigator.userAgent.indexOf("Mobi") > -1;
 
 window.addEventListener("scroll", function () {
 	scrollPosition = window.scrollY;
@@ -226,39 +229,74 @@ btnNext.addEventListener("click", () => {
 
 let btnBackDocumentation = document.querySelector("#btn-back-documentation");
 let btnNextDocumentaition = document.querySelector("#btn-next-documentation");
-let currentDocumentation = 3;
 let documentationIndex = 0;
-if (documentationIndex === 0) {
-	btnBackDocumentation.classList.add("hide");
-}
 const documentaionList = document.querySelectorAll(
 	".documentation-wrapper .documentation-card"
 );
-btnBackDocumentation.addEventListener("click", () => {
-	if (documentationIndex > 0) {
-		documentaionList[documentationIndex - 1].classList.remove("hide");
-		documentaionList[documentationIndex + 2].classList.add("hide");
-		documentationIndex--;
-		currentDocumentation--;
-	}
-	if (currentDocumentation <= documentaionList.length - 1) {
-		btnNextDocumentaition.classList.remove("hide");
-	}
-	if (documentationIndex === 0) {
-		btnBackDocumentation.classList.add("hide");
-	}
-});
-btnNextDocumentaition.addEventListener("click", () => {
-	if (currentDocumentation <= documentaionList.length - 1) {
-		documentaionList[currentDocumentation].classList.remove("hide");
-		documentaionList[documentationIndex].classList.add("hide");
-		documentationIndex++;
-		currentDocumentation++;
-	}
-	if (documentationIndex > 0) {
-		btnBackDocumentation.classList.remove("hide");
-	}
-	if (currentDocumentation > documentaionList.length - 1) {
-		btnNextDocumentaition.classList.add("hide");
-	}
-});
+if (documentationIndex === 0) {
+	btnBackDocumentation.classList.add("hide");
+}
+if(!isMobile){
+	let currentDocumentation = 3;
+	btnBackDocumentation.addEventListener("click", () => {
+		if (documentationIndex > 0) {
+			documentaionList[documentationIndex - 1].classList.remove("hide");
+			documentaionList[documentationIndex + 2].classList.add("hide");
+			documentationIndex--;
+			currentDocumentation--;
+		}
+		if (currentDocumentation <= documentaionList.length - 1) {
+			btnNextDocumentaition.classList.remove("hide");
+		}
+		if (documentationIndex === 0) {
+			btnBackDocumentation.classList.add("hide");
+		}
+	});
+	btnNextDocumentaition.addEventListener("click", () => {
+		if (currentDocumentation <= documentaionList.length - 1) {
+			documentaionList[currentDocumentation].classList.remove("hide");
+			documentaionList[documentationIndex].classList.add("hide");
+			documentationIndex++;
+			currentDocumentation++;
+		}
+		if (documentationIndex > 0) {
+			btnBackDocumentation.classList.remove("hide");
+		}
+		if (currentDocumentation > documentaionList.length - 1) {
+			btnNextDocumentaition.classList.add("hide");
+		}
+	});
+}else{
+	documentaionList[1].classList.add("hide");
+	documentaionList[2].classList.add("hide");
+	let currentDocumentation = 1;
+	btnBackDocumentation.addEventListener("click", () => {
+		if (documentationIndex > 0) {
+			documentaionList[documentationIndex - 1].classList.remove("hide");
+			documentaionList[documentationIndex].classList.add("hide");
+			documentationIndex--;
+			currentDocumentation--;
+		}
+		if (currentDocumentation <= documentaionList.length - 1) {
+			btnNextDocumentaition.classList.remove("hide");
+		}
+		if (documentationIndex === 0) {
+			btnBackDocumentation.classList.add("hide");
+		}
+	});
+	btnNextDocumentaition.addEventListener("click", () => {
+		if (currentDocumentation <= documentaionList.length - 1) {
+			documentaionList[currentDocumentation].classList.remove("hide");
+			documentaionList[documentationIndex].classList.add("hide");
+			documentationIndex++;
+			currentDocumentation++;
+		}
+		if (documentationIndex > 0) {
+			btnBackDocumentation.classList.remove("hide");
+		}
+		if (currentDocumentation > documentaionList.length - 1) {
+			btnNextDocumentaition.classList.add("hide");
+		}
+	});
+
+}

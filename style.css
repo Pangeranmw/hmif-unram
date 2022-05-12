@@ -492,7 +492,7 @@ button.next-gallery img:hover, button.before-gallery img:hover{
   line-height: 1.5;
   font-weight: 400;
   color: black;
-  
+
 }
 /* End Intro Section */
 
@@ -858,6 +858,51 @@ button.next-gallery img:hover, button.before-gallery img:hover{
     width: 12em;
   }
   /* END Leader Section */
+
+  /* Documentation Section */
+  .documentation-section{
+    padding: 2em;
+  }
+  h2{
+    font-size: 1.5em;
+  }
+  .documentation-wrapper{
+    margin-right: 0em;
+    flex-direction: column;
+  }
+  .documentation-wrapper button{
+    position: absolute;
+  }
+  .documentation-wrapper button img{
+    height: 3em;
+  }
+  .documentation-wrapper .before-documentation{
+    left: 5%;
+  }
+  .documentation-wrapper .next-documentation{
+    right: 5%;
+  }
+  .documentation-wrapper .before-documentation, .documentation-wrapper .documentation-card{
+    margin-bottom: 1em;
+    margin-right: 0;
+  }
+  .documentation-wrapper .next-documentation{
+    transform: scaleX(-1);
+  }
+  .documentation-image{
+    height: 8em;
+  }
+  .about-activity{
+    padding: 1em;
+    width: 100%;
+  }
+  .about-activity .activity{
+    font-size: 1em;
+  }
+  .about-activity .desc{
+    font-size: 0.8em;
+  }
+  /* END Documentation Section */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
