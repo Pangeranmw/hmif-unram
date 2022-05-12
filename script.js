@@ -233,15 +233,20 @@ let documentationIndex = 0;
 const documentaionList = document.querySelectorAll(
 	".documentation-wrapper .documentation-card"
 );
+const documentationCard = document.querySelector(
+	".documentation-card"
+);
 if (documentationIndex === 0) {
 	btnBackDocumentation.classList.add("hide");
 }
 if(!isMobile){
 	let currentDocumentation = 3;
 	btnBackDocumentation.addEventListener("click", () => {
+		documentationCard.style.animationName = "slideBefore";
 		if (documentationIndex > 0) {
 			documentaionList[documentationIndex - 1].classList.remove("hide");
 			documentaionList[documentationIndex + 2].classList.add("hide");
+			documentaionList[documentationIndex - 1].style.animationName = "slideBefore";
 			documentationIndex--;
 			currentDocumentation--;
 		}
@@ -253,9 +258,13 @@ if(!isMobile){
 		}
 	});
 	btnNextDocumentaition.addEventListener("click", () => {
+
 		if (currentDocumentation <= documentaionList.length - 1) {
 			documentaionList[currentDocumentation].classList.remove("hide");
 			documentaionList[documentationIndex].classList.add("hide");
+			documentaionList[currentDocumentation].style.animationName =
+				"slideNext";
+
 			documentationIndex++;
 			currentDocumentation++;
 		}
@@ -273,6 +282,10 @@ if(!isMobile){
 	btnBackDocumentation.addEventListener("click", () => {
 		if (documentationIndex > 0) {
 			documentaionList[documentationIndex - 1].classList.remove("hide");
+			documentaionList[documentationIndex - 1].style.animationName =
+				"slideBefore";
+
+			documentaionList[documentationIndex].classList.add("hide");
 			documentaionList[documentationIndex].classList.add("hide");
 			documentationIndex--;
 			currentDocumentation--;
@@ -287,6 +300,8 @@ if(!isMobile){
 	btnNextDocumentaition.addEventListener("click", () => {
 		if (currentDocumentation <= documentaionList.length - 1) {
 			documentaionList[currentDocumentation].classList.remove("hide");
+			documentaionList[currentDocumentation].style.animationName = "slideNext";
+
 			documentaionList[documentationIndex].classList.add("hide");
 			documentationIndex++;
 			currentDocumentation++;

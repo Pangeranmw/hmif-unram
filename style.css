@@ -442,7 +442,8 @@ button.next-gallery img:hover, button.before-gallery img:hover{
   border-radius: 20px;
   box-shadow: 0px 27px 87.51px rgba(0, 0, 0, 0.1);
   animation-duration: 0.4s;
-  animation-name: slideX;
+  /* animation-name: slideBefore; */
+  /* animation-name: slideNext; */
 }
 .documentation-image{
   border-radius: 20px 20px 0 0;
@@ -982,17 +983,17 @@ button.next-gallery img:hover, button.before-gallery img:hover{
     padding-right: 6em;
   }
 }
-@keyframes slideY {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-@keyframes slideX {
+@keyframes slideBefore {
   from {
     transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideNext {
+  from {
+    transform: translateX(100%);
   }
   to {
     transform: translateX(0%);
