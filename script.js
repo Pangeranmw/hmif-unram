@@ -7,9 +7,7 @@ const modal = document.getElementById("login-modal");
 const loginBtn = document.getElementById("button-login");
 const closeModal = document.getElementsByClassName("close")[0];
 const body = document.getElementsByTagName("BODY")[0];
-var isMobile =
-	Math.min(window.screen.width, window.screen.height) < 768 ||
-	navigator.userAgent.indexOf("Mobi") > -1;
+var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
 
 window.addEventListener("scroll", function () {
 	scrollPosition = window.scrollY;
