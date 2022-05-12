@@ -872,6 +872,7 @@ button.next-gallery img:hover, button.before-gallery img:hover{
   }
   .documentation-wrapper button{
     position: absolute;
+    z-index: 2;
   }
   .documentation-wrapper button img{
     height: 3em;
