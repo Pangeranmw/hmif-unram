@@ -222,3 +222,43 @@ btnNext.addEventListener("click", () => {
 		btnNext.classList.add("hide");
 	}
 });
+
+
+let btnBackDocumentation = document.querySelector("#btn-back-documentation");
+let btnNextDocumentaition = document.querySelector("#btn-next-documentation");
+let currentDocumentation = 3;
+let documentationIndex = 0;
+if (documentationIndex === 0) {
+	btnBackDocumentation.classList.add("hide");
+}
+const documentaionList = document.querySelectorAll(
+	".documentation-wrapper .documentation-card"
+);
+btnBackDocumentation.addEventListener("click", () => {
+	if (documentationIndex > 0) {
+		documentaionList[documentationIndex - 1].classList.remove("hide");
+		documentaionList[documentationIndex + 2].classList.add("hide");
+		documentationIndex--;
+		currentDocumentation--;
+	}
+	if (currentDocumentation <= documentaionList.length - 1) {
+		btnNextDocumentaition.classList.remove("hide");
+	}
+	if (documentationIndex === 0) {
+		btnBackDocumentation.classList.add("hide");
+	}
+});
+btnNextDocumentaition.addEventListener("click", () => {
+	if (currentDocumentation <= documentaionList.length - 1) {
+		documentaionList[currentDocumentation].classList.remove("hide");
+		documentaionList[documentationIndex].classList.add("hide");
+		documentationIndex++;
+		currentDocumentation++;
+	}
+	if (documentationIndex > 0) {
+		btnBackDocumentation.classList.remove("hide");
+	}
+	if (currentDocumentation > documentaionList.length - 1) {
+		btnNextDocumentaition.classList.add("hide");
+	}
+});
