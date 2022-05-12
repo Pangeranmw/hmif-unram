@@ -57,3 +57,168 @@ function changeDivisionFilter(division) {
 	btn.classList.add("active");
 	filter.classList.remove("hide");
 }
+
+let btnBack = document.querySelector("#btn-before-gallery");
+let btnNext = document.querySelector("#btn-next-gallery");
+let nextIndex = 0;
+const galleryList = document.querySelectorAll(".gallery .gallery-item");
+const galleryImage = document.querySelectorAll(".gallery .gallery-item .image");
+btnBack.addEventListener("click", () => {
+	if (nextIndex > 0) {
+		if (nextIndex == 5) {
+			galleryList[0].classList.remove("gallery-item-6", "show-grid");
+			galleryImage[0].classList.remove("gallery-image-6", "show-grid");
+			galleryList[0].classList.add("gallery-item-5", "show-grid");
+			galleryImage[0].classList.add("gallery-image-5", "show-grid");
+			
+			galleryList[1].classList.remove("gallery-item-5", "show-grid");
+			galleryImage[1].classList.remove("gallery-image-5", "show-grid");
+			galleryList[1].classList.add("gallery-item-4", "show-grid");
+			galleryImage[1].classList.add("gallery-image-4", "show-grid");
+
+			galleryList[2].classList.remove("gallery-item-4", "show-grid");
+			galleryImage[2].classList.remove("gallery-image-4", "show-grid");
+			galleryList[2].classList.add("gallery-item-3", "show-grid");
+			galleryImage[2].classList.add("gallery-image-3", "show-grid");
+
+			galleryList[3].classList.remove("gallery-item-3", "show-grid");
+			galleryImage[3].classList.remove("gallery-image-3", "show-grid");
+			galleryList[3].classList.add("gallery-item-2", "show-grid");
+			galleryImage[3].classList.add("gallery-image-2", "show-grid");
+			
+			galleryList[4].classList.remove("gallery-item-2", "show-grid");
+			galleryImage[4].classList.remove("gallery-image-2", "show-grid");
+
+			galleryList[5].classList.add("gallery-item-6", "show-grid");
+			galleryImage[5].classList.add("gallery-image-6", "show-grid");
+		}else if (nextIndex == 4) {
+			galleryList[0].classList.remove("gallery-item-5", "show-grid");
+			galleryImage[0].classList.remove("gallery-image-5", "show-grid");
+			galleryList[0].classList.add("gallery-item-4", "show-grid");
+			galleryImage[0].classList.add("gallery-image-4", "show-grid");
+
+			galleryList[1].classList.remove("gallery-item-4", "show-grid");
+			galleryImage[1].classList.remove("gallery-image-4", "show-grid");
+			galleryList[1].classList.add("gallery-item-3", "show-grid");
+			galleryImage[1].classList.add("gallery-image-3", "show-grid");
+
+			galleryList[2].classList.remove("gallery-item-3", "show-grid");
+			galleryImage[2].classList.remove("gallery-image-3", "show-grid");
+			galleryList[2].classList.add("gallery-item-2", "show-grid");
+			galleryImage[2].classList.add("gallery-image-2", "show-grid");
+
+			galleryList[3].classList.remove("gallery-item-2", "show-grid");
+			galleryImage[3].classList.remove("gallery-image-2", "show-grid");
+
+			galleryList[4].classList.add("gallery-item-5", "show-grid");
+			galleryImage[4].classList.add("gallery-image-5", "show-grid");
+		}else if (nextIndex == 3) {
+			galleryList[0].classList.remove("gallery-item-4", "show-grid");
+			galleryImage[0].classList.remove("gallery-image-4", "show-grid");
+			galleryList[0].classList.add("gallery-item-3", "show-grid");
+			galleryImage[0].classList.add("gallery-image-3", "show-grid");
+
+			galleryList[1].classList.remove("gallery-item-3", "show-grid");
+			galleryImage[1].classList.remove("gallery-image-3", "show-grid");
+			galleryList[1].classList.add("gallery-item-2", "show-grid");
+			galleryImage[1].classList.add("gallery-image-2", "show-grid");
+
+			galleryList[2].classList.remove("gallery-item-2", "show-grid");
+			galleryImage[2].classList.remove("gallery-image-2", "show-grid");
+
+			galleryList[3].classList.add("gallery-item-4", "show-grid");
+			galleryImage[3].classList.add("gallery-image-4", "show-grid");
+		} else if (nextIndex == 2) {
+			galleryList[0].classList.remove("gallery-item-3", "show-grid");
+			galleryImage[0].classList.remove("gallery-image-3", "show-grid");
+			galleryList[0].classList.add("gallery-item-2", "show-grid");
+			galleryImage[0].classList.add("gallery-image-2", "show-grid");
+
+			galleryList[1].classList.remove("gallery-item-2", "show-grid");
+			galleryImage[1].classList.remove("gallery-image-2", "show-grid");
+
+			galleryList[2].classList.add("gallery-item-3", "show-grid");
+			galleryImage[2].classList.add("gallery-image-3", "show-grid");
+
+		} else if (nextIndex == 1) {
+			galleryList[1].classList.add("gallery-item-2", "show-grid");
+			galleryImage[1].classList.add("gallery-image-2", "show-grid");
+			galleryList[0].classList.remove("gallery-item-2", "show-grid");
+			galleryImage[0].classList.remove("gallery-image-2", "show-grid");
+		}
+		nextIndex--;
+	}
+	if (nextIndex <5) {
+		btnNext.classList.remove("hide");
+	}
+	if (nextIndex == 0) {
+		btnBack.classList.add("hide");
+	}
+});
+if (nextIndex == 0) {
+	btnBack.classList.add("hide");
+}
+btnNext.addEventListener("click", () => {
+	if (nextIndex < 5) {
+		
+		galleryList[nextIndex].classList.add(
+			"gallery-item-2",
+			"show-grid"
+		);
+		galleryImage[nextIndex].classList.add(
+			"gallery-image-2",
+			"show-grid"
+		);
+		galleryList[nextIndex + 1].classList.remove("gallery-item-2");
+		galleryImage[nextIndex + 1].classList.remove("gallery-image-2");
+		if(nextIndex==1){
+			galleryList[2].classList.remove("gallery-item-3");
+			galleryImage[2].classList.remove("gallery-image-3");
+		}
+		if(nextIndex>=1&&nextIndex<=4){
+			galleryList[nextIndex - 1].classList.remove("gallery-item-2");
+			galleryImage[nextIndex - 1].classList.remove("gallery-image-2");
+			galleryList[nextIndex - 1].classList.add("gallery-item-3", "show-grid");
+			galleryImage[nextIndex - 1].classList.add("gallery-image-3", "show-grid");
+
+			galleryList[nextIndex].classList.add("gallery-item-2", "show-grid");
+			galleryImage[nextIndex].classList.add("gallery-image-2", "show-grid");
+		}
+		if (nextIndex >= 2 && nextIndex <= 4) {
+			galleryList[nextIndex - 2].classList.remove("gallery-item-3");
+			galleryImage[nextIndex - 2].classList.remove("gallery-image-3");
+			galleryList[nextIndex - 2].classList.add("gallery-item-4", "show-grid");
+			galleryImage[nextIndex - 2].classList.add("gallery-image-4", "show-grid");
+		}
+		if (nextIndex == 2) {
+			galleryList[3].classList.remove("gallery-item-4");
+			galleryImage[3].classList.remove("gallery-image-4");
+		}
+		if (nextIndex >= 3 && nextIndex <= 4) {
+			galleryList[nextIndex - 3].classList.remove("gallery-item-4");
+			galleryImage[nextIndex - 3].classList.remove("gallery-image-4");
+			galleryList[nextIndex - 3].classList.add("gallery-item-5", "show-grid");
+			galleryImage[nextIndex - 3].classList.add("gallery-image-5", "show-grid");
+		}
+		if (nextIndex == 3) {
+			galleryList[4].classList.remove("gallery-item-5");
+			galleryImage[4].classList.remove("gallery-image-5");
+		}
+
+		if (nextIndex == 4) {
+			galleryList[0].classList.remove("gallery-item-5");
+			galleryImage[0].classList.remove("gallery-image-5");
+			galleryList[0].classList.add("gallery-item-6", "show-grid");
+			galleryImage[0].classList.add("gallery-image-6", "show-grid");
+			galleryList[5].classList.remove("gallery-item-6");
+			galleryImage[5].classList.remove("gallery-image-6");
+		}
+		nextIndex++;
+	}
+	if (nextIndex > 0) {
+		btnBack.classList.remove("hide");
+	}
+	if (nextIndex > 4) {
+		btnNext.classList.add("hide");
+	}
+});

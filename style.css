@@ -10,6 +10,7 @@
   --blue-light-hover: #006fc5;
   --blue: #0212FD;
   --blue-hover: #1f29b5;
+  --purple: #424DF9;
   --red: #ED0006;
   --yellow: #FEF400;
   --gray: #565656;
@@ -59,6 +60,9 @@ header a.active{
 .hide{
   display: none;
 }
+.show-grid{
+  display: grid !important;
+}
 .bg-white-shadow{
   backdrop-filter: blur(20px);
   background-color: rgba(255, 255, 255, 0.9);
@@ -88,6 +92,11 @@ header a.active{
 	width: 100%;
 	height: 100%;
 }
+.btn-reset,.btn-reset:active,.btn-reset:focus,.btn-reset:hover{
+  border: none;
+  padding: 0;
+  background-color: unset;
+}
 /* Header */
 header #nav-left{
   display: flex;
@@ -99,7 +108,7 @@ header .logo {
 }
 header img{
   margin-right: 0.5em;
-  height: 3em;
+  height: 4em;
 }
 header{
   position: fixed;
@@ -164,14 +173,14 @@ header li{
   overflow: hidden;
   z-index: -999;
 }
-.hero-section .hero-left h1{
+h1{
   font-size: 5em;
 }
 .hero-section .hero-right{
   display: flex;
 }
 .hero-section .hero-right img{
-  width: 8em;
+  width: 10em;
   height: 100%;
   margin-left: 1em;
 }
@@ -237,16 +246,134 @@ header li{
 
 /* Leader Section */
 .leader-section{
-
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
 }
-.leader-section .leader-background{
+.leader-section .leader-left p{
+  font-size: 2em;
+  font-weight: 300;
+  color: black;
+  font-style: italic;
+}
+.leader-section .leader-left span{
+  font-weight: 500;
+  color: var(--blue);
+}
+.leader-section .next-gallery img, .leader-section .before-gallery img{
+  height: 3em;
+}
+button.next-gallery img:hover, button.before-gallery img:hover{
+  filter: drop-shadow(0px 10px 10px rgb(255, 255, 255));
+}
+.leader-section .next-gallery, .leader-section .before-gallery{
+  position: relative;
+}
+.leader-section .before-gallery img{
+  transform: scaleX(-1);
+}
+.leader-background{
   height: 130vh;
   width: 100%;
   position: absolute;
   left: 0;
-  z-index: -1;
-  transform: skew(0,5deg) scaleX(1);
+  z-index: -99;
+  transform: scaleY(-1) skew(0,5deg);
   background-color: #FEFFED;
+}
+.gallery-wrapper{
+  display: flex;
+  width: 40%;
+}
+.gallery{
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+}
+.gallery-card:hover{
+  transform: scale(1.1);
+  transition: all 100ms ease-in-out;
+}
+.gallery-item {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.gallery-card{
+  width: max-content;
+  height: max-content;
+  border-radius: 1em;
+  background-color: var(--purple);
+}
+.gallery-card .image{
+  background-color: #ffffff;
+  height: 28em;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 1em 1em 0 0;
+  transition: all 200ms ease-in-out;
+}
+.gallery-image-2{
+  height: 27em !important;
+}.gallery-image-3{
+  height: 26em !important;
+}.gallery-image-4{
+  height: 25em !important;
+}.gallery-image-5{
+  height: 24em !important;
+}.gallery-image-6{
+  height: 23em !important;
+}
+.gallery-item-2,.gallery-item-3,.gallery-item-4,.gallery-item-5,.gallery-item-6{
+  filter:blur(5px) !important;
+  transition: all 200ms ease-in-out;
+}
+.gallery-item-2{
+  z-index: -1;
+  margin-left: 3em !important;
+}.gallery-item-3{
+  z-index: -2;
+  margin-left: 6em !important;
+}.gallery-item-4{
+  z-index: -3;
+  margin-left: 9em !important;
+}.gallery-item-5{
+  z-index: -4;
+  margin-left: 12em !important;
+}.gallery-item-6{
+  z-index: -5;
+  margin-left: 15em !important;
+}
+.gallery-card .periode{
+  position: absolute;
+  padding: 0.5em;
+  background-color: var(--purple);
+  border-radius: 1em 0 1em 0;
+  color: white;
+  font-size: 0.8em;
+}
+.gallery-card .info{
+  padding: 0.8em;
+  display: flex;
+  width: 15em;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-card .name{
+  font-weight: 600;
+  color: white;
+}
+.gallery-card .instagram{
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+  font-size: 1em;
+  color: white;
+}
+.gallery-card .instagram img{
+  margin-right: 0.5em;
+  height: 0.8em;
 }
 /* END Leader Section */
 
@@ -517,13 +644,13 @@ header li{
     height: 80vh;
     flex-direction: column-reverse;
   }
-  .hero-section .hero-left h1{
+  h1{
     margin-top: 1em;
     font-size: 2em;
     text-align: center;
   }
   .hero-section .hero-right img{
-    width: 4.5em;
+    width: 5em;
   }
   .tagline{
     padding: 0.8em;
@@ -588,15 +715,86 @@ header li{
     padding: 0.5em;
   }
   /* End Org-Structure Section */
+
+  /* Leader Section */
+  .leader-section{
+    justify-content: center;
+    flex-direction: column;
+    height: 60vh;
+  }
+  .leader-section .leader-left{
+    margin-bottom: 2em;
+  }
+  .leader-section .leader-left p{
+    font-size: 1em;
+  }
+  .leader-section .next-gallery img, .leader-section .before-gallery img{
+    height: 2em;
+  }
+  .leader-background{
+    height: 110vh;
+  }
+  .gallery-wrapper{
+    width: 100%;
+  }
+  .gallery-card .image{
+    height: 7em;
+  }
+  .gallery-image-2{
+    height: 6em !important;
+  }.gallery-image-3{
+    height: 5em !important;
+  }.gallery-image-4{
+    height: 4em !important;
+  }.gallery-image-5{
+    height: 3em !important;
+  }.gallery-image-6{
+    height: 2em !important;
+  }
+  .gallery-item-2{
+    margin-top: 3em !important;
+  }.gallery-item-3{
+    margin-top: 6em !important;
+    display: none !important;
+  }.gallery-item-4{
+    display: none !important;
+    margin-top: 9em !important;
+  }.gallery-item-5{
+    display: none !important;
+    margin-top: 12em !important;
+  }.gallery-item-6{
+    display: none !important;
+    margin-top: 15em !important;
+  }
+  .gallery-card .info{
+    padding: 0.5em;
+    width: 12em;
+  }
+  /* END Leader Section */
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  /* Hero Section */
+  .hero-section{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  h1{
+    font-size: 3em;
+    text-align: center;
+  }
+  .hero-section .hero-right img{
+    width: 8em;
+  }
+  /* END Hero Section */
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+
   /* Org-Structure Section */
   .org-structure-wrapper{
     flex-wrap: wrap;
@@ -649,5 +847,21 @@ header li{
   .container{
     padding-left: 6em;
     padding-right: 6em;
+  }
+}
+@keyframes slideY {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideX {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
