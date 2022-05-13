@@ -7,8 +7,11 @@ const modal = document.getElementById("login-modal");
 const loginBtn = document.getElementById("button-login");
 const closeModal = document.getElementsByClassName("close")[0];
 const body = document.getElementsByTagName("BODY")[0];
-var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
 
+function isMobile(){
+	return Math.min(window.screen.width, window.screen.height) < 768 ||
+	navigator.userAgent.indexOf("Mobi") > -1;
+}
 window.addEventListener("scroll", function () {
 	scrollPosition = window.scrollY;
 	if (scrollPosition <= 60 && !nav_list.classList.contains("show")) {
@@ -237,8 +240,10 @@ const documentationCard = document.querySelector(
 if (documentationIndex === 0) {
 	btnBackDocumentation.classList.add("hide");
 }
-if(!isMobile){
+if(!isMobile()){
 	let currentDocumentation = 3;
+	documentaionList[1].classList.remove("hide");
+	documentaionList[2].classList.remove("hide");
 	btnBackDocumentation.addEventListener("click", () => {
 		documentationCard.style.animationName = "slideBefore";
 		if (documentationIndex > 0) {
