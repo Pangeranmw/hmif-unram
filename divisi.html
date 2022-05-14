@@ -5,14 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="assets/logo_hmif.svg">
+  <link rel="icon" type="image/x-icon" href="assets/logo_hmif.png">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Beranda - HMIF Unram</title>
 </head>
 <body>
   <header class="container">
     <div id="nav-left">
-      <img class="logo" src="assets/logo_hmif.svg" alt="">
+      <img class="logo" src="assets/logo_hmif.png" alt="">
       <!-- Mobile Hamburger -->
       <button class="hamburger" id="hamburger">
         <i class="fas fa-bars" id="fa-bars"></i>
@@ -23,10 +23,10 @@
     </div>
     <nav class="nav-list" id="nav-list">
       <ul>
-        <li><a href="home.html">Beranda</a></li>
-        <li><a href="divisi.html" class="active">Divisi</a></li>
-        <li><a href="kalender.html">Kalender</a></li>
-        <li><a href="kotaksaran.html">Kotak Saran</a></li>
+        <li><a href="home.html" class="a-without-bg">Beranda</a></li>
+        <li><a href="divisi.html" class="a-without-bg active-without-bg">Divisi</a></li>
+        <li><a href="kalender.html" class="a-without-bg">Kalender</a></li>
+        <li><a href="kotaksaran.html" class="a-without-bg">Kotak Saran</a></li>
       </ul>
       <button>
         Login
@@ -34,25 +34,26 @@
     </nav>
   </header>
   <section class="hero-section container">
+    <div class="hero-bg"></div>
     <div class="hero-background">
       <video autoplay="" loop="" class="hero__background-video hero__background-video--light">
         <source src="assets/video-bg-light.mp4" type="video/mp4">
       </video>
     </div>
     <div class="hero-left">
-      <h1>DIVISI HMIF</h1>
+      <h1>Divisi HMIF</h1>
       <div class="tagline">
         <span>‘‘</span>
         <p>Informatika Beda! Informatika Satu! <br>
           <span>Informatika Beda tapi Satu!</span>
         </p>
       </div>
-      <button class="button cta-button" onclick="location='#divisi'">
+      <!-- <button class="button cta-button" onclick="location='#divisi'">
         <span>Lihat Divisi</span>
-      </button>
+      </button> -->
     </div>
     <div class="hero-right">
-      <img src="assets/logo_hmif.svg" alt="">
+      <img src="assets/logo_hmif.png" alt="">
       <img src="assets/logo_ifunram.png" alt="">
       <img src="assets/logo_unram.png" alt="">
     </div>
@@ -75,16 +76,16 @@
       </div>
       <div class="divisi-right">
         <div class="divisi-item what-is-hmif">
-          <h2>TUGAS DIVISI PEMBERDAYAAN ANGGOTA</h2>
+          <h2>Tugas Divisi Pemberdayaan Anggota</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis suscipit esse, eos sequi dolor aliquid similique mollitia repudiandae atque aliquam ratione animi dolorem eum id commodi dolorum eius provident tempora.</p>
         </div>
       </div>
     </section>
     <section class="program container" id="program-pemda">
-      <h2>PROGRAM KERJA</h2>
+      <h2>Program Kerja</h2>
       <div class="program-wrapper">
         <div class="program-item left">
-          <div class="program-title">1. PELATIHAN</div>
+          <div class="program-title">1. Pelatihan</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
         <div class="program-item right">
@@ -100,7 +101,7 @@
       </div>
       <div class="program-wrapper">
         <div class="program-item left">
-          <div class="program-title">2. KOMUNITAS</div>
+          <div class="program-title">2. Komunitas</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
         <div class="program-item right">
@@ -117,18 +118,18 @@
       </div>
       <div class="program-wrapper">
         <div class="program-item left">
-          <div class="program-title">3. SOSIALISASI LAB</div>
+          <div class="program-title">3. Sosialisasi Lab</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
-        <div class="program-item left">
-          <div class="program-title">4. KELOMPOK BELAJAR</div>
+        <div class="program-item right">
+          <div class="program-title">4. Kelompok Belajar</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
       </div>
     </section>
     <div class="anchor" id="structure-pemda"></div>
     <section class="org-structure container">
-      <h2>ANGGOTA DIVISI PEMDA HMIF 2022</h2>
+      <h2>Anggota Divisi<span class="br">Pemberdayaan Anggota</span> <span class="br">HMIF 2022</span></h2>
       <div class="org-structure-wrapper">
         <div class="structure-card">
           <img src="assets/pemda-indira.png" alt="">
@@ -192,13 +193,13 @@
       </div>
       <div class="divisi-right">
         <div class="divisi-item what-is-hmif">
-          <h2>TUGAS DIVISI ADVOKASI</h2>
+          <h2>Tugas Divisi Advokasi</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis suscipit esse, eos sequi dolor aliquid similique mollitia repudiandae atque aliquam ratione animi dolorem eum id commodi dolorum eius provident tempora.</p>
         </div>
       </div>
     </section>
     <section class="program container" id="program-advo">
-      <h2>PROGRAM KERJA</h2>
+      <h2>Program Kerja</h2>
       <div class="program-wrapper">
         <div class="program-item left">
           <div class="program-title">1. ?????</div>
@@ -237,7 +238,7 @@
           <div class="program-title">3. ?????</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
-        <div class="program-item left">
+        <div class="program-item right">
           <div class="program-title">4. ????????</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
@@ -245,7 +246,7 @@
     </section>
     <div class="anchor" id="structure-advo"></div>
     <section class="org-structure container">
-      <h2>ANGGOTA DIVISI ADVOKASI HMIF 2022</h2>
+      <h2>Anggota Divisi<span class="br">Advokasi HMIF 2022</span></h2>
       <div class="org-structure-wrapper">
         <div class="structure-card">
           <img src="assets/advo-dinan.png" alt="">
@@ -304,13 +305,13 @@
       </div>
       <div class="divisi-right">
         <div class="divisi-item what-is-hmif">
-          <h2>TUGAS DIVISI ORGANISASI</h2>
+          <h2>Tugas Divisi Organisasi</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis suscipit esse, eos sequi dolor aliquid similique mollitia repudiandae atque aliquam ratione animi dolorem eum id commodi dolorum eius provident tempora.</p>
         </div>
       </div>
     </section>
     <section class="program container" id="program-organ">
-      <h2>PROGRAM KERJA</h2>
+      <h2>Program Kerja</h2>
       <div class="program-wrapper">
         <div class="program-item left">
           <div class="program-title">1. ?????</div>
@@ -349,7 +350,7 @@
           <div class="program-title">3. ?????</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
-        <div class="program-item left">
+        <div class="program-item right">
           <div class="program-title">4. ????????</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
@@ -357,7 +358,7 @@
     </section>
     <div class="anchor" id="structure-organ"></div>
     <section class="org-structure container">
-      <h2>ANGGOTA DIVISI ORGANISASI HMIF 2022</h2>
+      <h2>Anggota Divisi <span class="br">Organisasi HMIF 2022</span></h2>
       <div class="org-structure-wrapper">
         <div class="structure-card">
           <img src="assets/organ-aura.png" alt="">
@@ -421,13 +422,13 @@
       </div>
       <div class="divisi-right">
         <div class="divisi-item what-is-hmif">
-          <h2>TUGAS DIVISI KESEKRETARIATAN</h2>
+          <h2>Tugas Divisi Kesekretariatan</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis suscipit esse, eos sequi dolor aliquid similique mollitia repudiandae atque aliquam ratione animi dolorem eum id commodi dolorum eius provident tempora.</p>
         </div>
       </div>
     </section>
     <section class="program container" id="program-kesek">
-      <h2>PROGRAM KERJA</h2>
+      <h2>Program Kerja</h2>
       <div class="program-wrapper">
         <div class="program-item left">
           <div class="program-title">1. ?????</div>
@@ -466,7 +467,7 @@
           <div class="program-title">3. ?????</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
-        <div class="program-item left">
+        <div class="program-item right">
           <div class="program-title">4. ????????</div>
           <div class="program-desc"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse possimus pariatur totam dolore sapiente illo laborum aliquam ab explicabo quos, eum placeat velit doloribus. Tenetur nulla unde maxime non.</p></div>
         </div>
@@ -474,7 +475,7 @@
     </section>
     <div class="anchor" id="structure-kesek"></div>
     <section class="org-structure container">
-      <h2>ANGGOTA DIVISI KESEKRETARIATAN HMIF 2022</h2>
+      <h2>Anggota Divisi <span class="br">Kesekretariatan HMIF 2022</span></h2>
       <div class="org-structure-wrapper">
         <div class="structure-card">
           <img src="assets/sekret-dedy.png" alt="">
@@ -524,5 +525,31 @@
     </section>
   </div>
   <script src="script.js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
+      scrollPosition = window.scrollY;
+      if (scrollPosition <= 60 && !nav_list.classList.contains("show")) {
+        header.classList.remove("bg-white-shadow");
+        for (let i = 0; i < nav.length; i++){
+          if (!nav[1].classList.contains("active-without-bg")) {
+            nav[1].classList.add("active-without-bg");
+          }
+          if (nav[i].classList.contains("active-without-bg")) {
+            nav[i].classList.remove("active-without-bg");
+          }
+          nav[i].classList.add("a-without-bg");
+          nav[i].classList.remove("a-with-bg");
+        }
+      } else {
+        header.classList.add("bg-white-shadow");
+        nav[1].classList.add("active");
+        for (let i = 0; i < nav.length; i++) {
+          nav[i].classList.remove("a-without-bg");
+          nav[i].classList.add("a-with-bg");
+          nav[i].classList.remove("active-without-bg");
+        }
+      }
+    });
+  </script>
 </body>
 </html>

@@ -5,14 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="assets/logo_hmif.svg">
+  <link rel="icon" type="image/x-icon" href="assets/logo_hmif.png">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Beranda - HMIF Unram</title>
 </head>
 <body>
   <header class="container">
     <div id="nav-left">
-      <img class="logo" src="assets/logo_hmif.svg" alt="">
+      <img class="logo" src="assets/logo_hmif.png" alt="">
       <!-- Mobile Hamburger -->
       <button class="hamburger" id="hamburger">
         <i class="fas fa-bars" id="fa-bars"></i>
@@ -21,12 +21,12 @@
         <i class="fas fa-times" id="fa-bars"></i>
       </button>
     </div>
-    <nav class="nav-list" id="nav-list">
+    <nav class="nav-list" id="nav-list" >
       <ul>
-        <li><a href="home.html" class="active">Beranda</a></li>
-        <li><a href="divisi.html">Divisi</a></li>
-        <li><a href="kalender.html">Kalender</a></li>
-        <li><a href="kotaksaran.html">Kotak Saran</a></li>
+        <li><a href="home.html" class="a-without-bg active-without-bg">Beranda</a></li>
+        <li><a href="divisi.html" class="a-without-bg">Divisi</a></li>
+        <li><a href="kalender.html" class="a-without-bg">Kalender</a></li>
+        <li><a href="kotaksaran.html" class="a-without-bg">Kotak Saran</a></li>
       </ul>
       <button>
         Login
@@ -34,13 +34,14 @@
     </nav>
   </header>
   <section class="hero-section container">
+    <div class="hero-bg"></div>
     <div class="hero-background">
       <video autoplay="" loop="" class="hero__background-video hero__background-video--light">
         <source src="assets/video-bg-light.mp4" type="video/mp4">
       </video>
     </div>
     <div class="hero-left">
-      <h1>Himpunan<br>Mahasiswa<br>Informatika</h1>
+      <h1>Himpunan <span class="br">Mahasiswa</span><span class="br">Informatika</span></h1>
       <div class="tagline">
         <span>‘‘</span>
         <p>Informatika Beda! Informatika Satu! <br>
@@ -49,19 +50,20 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="assets/logo_hmif.svg" alt="">
+      <img src="assets/logo_hmif.png" alt="">
       <img src="assets/logo_ifunram.png" alt="">
       <img src="assets/logo_unram.png" alt="">
     </div>
   </section>
   <section class="intro container" id="intro">
+    <!-- <div class="intro-background"></div> -->
     <div class="intro-left">
       <img src="assets/all hmif.png" alt="Pengurus HMIF 2022">
       <p>Pengurus HMIF 2022</p>
     </div>
     <div class="intro-right">
       <div class="intro-item what-is-hmif">
-        <h2>APA ITU HMIF?</h2>
+        <h2>Apa itu HMIF?</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis suscipit esse, eos sequi dolor aliquid similique mollitia repudiandae atque aliquam ratione animi dolorem eum id commodi dolorum eius provident tempora.</p>
       </div>
     </div>
@@ -69,7 +71,7 @@
   <div class="leader-background"></div>
   <section class="leader-section container">
     <div class="leader-left">
-      <h1>Our <br>Leaders</h1>
+      <h1>Our<span class="br"></span>Leaders</h1>
       <p>Let’s look at <span>the history</span>.</p>
     </div>
     <div class="gallery-wrapper">
@@ -134,7 +136,7 @@
   <section class="documentation-section container">
     <h2>Our Gallery</h2>
     <div class="documentation-wrapper">
-      <button class="before-documentation btn-reset" id="btn-back-documentation"><img src="assets/arrow_gallery.svg" alt=""></button>
+      <button class="before-documentation btn-reset" id="btn-back-documentation" onclick="beforeGalleryDoc()"><img src="assets/arrow_gallery.svg" alt=""></button>
       <div class="documentation-card">
         <div class="documentation-image" style="background-image: url('assets/image_dummy.png');"></div>
         <div class="about-activity">
@@ -142,14 +144,14 @@
           <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, dolorum distinctio! Unde </div>
         </div>
       </div>
-      <div class="documentation-card">
+      <div class="documentation-card hide-mobile-only">
         <div class="documentation-image" style="background-image: url('assets/image_dummy.png');"></div>
         <div class="about-activity">
           <div class="activity">Nama Kegiatan 1</div>
           <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, dolorum distinctio! Unde </div>
         </div>
       </div>
-      <div class="documentation-card">
+      <div class="documentation-card hide-mobile-only">
         <div class="documentation-image" style="background-image: url('assets/image_dummy.png');"></div>
         <div class="about-activity">
           <div class="activity">Nama Kegiatan 2</div>
@@ -170,7 +172,7 @@
           <div class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, dolorum distinctio! Unde </div>
         </div>
       </div>
-      <button class="next-documentation btn-reset" id="btn-next-documentation"><img src="assets/arrow_gallery.svg" alt=""></button>
+      <button class="next-documentation btn-reset" id="btn-next-documentation" onclick="nextGalleryDoc()"><img src="assets/arrow_gallery.svg" alt=""></button>
     </div>
   </section>
   <section class="visi-misi container">
@@ -207,51 +209,51 @@
     </div>
   </section>
   <section class="org-structure container" id="org-structure">
-    <h2>STRUKTUR ORGANISASI HMIF 2022</h2>
+    <h2>Struktur Organisasi <span class="br">HMIF 2022</span></h2>
     <div class="org-structure-item">
-      <div class="title">PENGURUS INTI</div>
+      <div class="title">Pengurus Inti</div>
       <div class="org-structure-wrapper">
         <div class="structure-card">
           <img src="assets/inti-sekum.png" alt="">
           <h3>Rudi Setiawan</h3>
-          <p>SEKRETARIS UMUM</p>
+          <p>Sekretaris Umum</p>
         </div>
         <div class="structure-card">
           <img src="assets/inti-ketum.png" alt="">
           <h3>M. Giri Restu Adjie</h3>
-          <p>KETUA UMUM</p>
+          <p>Ketua Umum</p>
         </div>
         <div class="structure-card">
           <img src="assets/inti-bendum.png" alt="">
           <h3>Dila Ega Aulia</h3>
-          <p>BENDAHARA UMUM</p>
+          <p>Bendahara Umum</p>
         </div>
       </div>
       <div class="org-structure-wrapper ">
         <div class="structure-card structure-card-co">
           <img src="assets/advo-dinan.png" alt="">
-          <h3>Lalu Herdinan Eka T.</h3>
-          <p>CO DIVISI ADVOKASI</p>
+          <h3>Lalu Herdinan E.T.</h3>
+          <p>CO Advokasi</p>
         </div>
         <div class="structure-card structure-card-co">
           <img src="assets/sekret-dedy.png" alt="">
           <h3>Dedy Razuna A.</h3>
-          <p>CO KESEKRETARIATAN</p>
+          <p>CO Kesekretariatan</p>
         </div>
         <div class="structure-card structure-card-co">
           <img src="assets/organ-aura.png" alt="">
           <h3>Aura Trisdayanti</h3>
-          <p>CO DIVISI ORGANISASI</p>
+          <p>CO Organisasi</p>
         </div>
         <div class="structure-card structure-card-co">
           <img src="assets/pemda-indira.png" alt="">
           <h3>Indra Yunia</h3>
-          <p>CO PEMBERDAYAAN ANGGOTA</p>
+          <p>CO Pemberdayaan Anggota</p>
         </div>
       </div>
     </div>
     <div class="org-structure-item">
-      <div class="title">PENGURUS DIVISI</div>
+      <div class="title">Pengurus Divisi</div>
       <div class="org-structure-wrapper">
         <div class="structure-card structure-card-division" onclick="location='divisi.html#divisi-pemda'">
           <img src="assets/advo.png" alt="">
@@ -273,5 +275,31 @@
     </div>
   </section>
   <script src="script.js"></script>
+  <script>
+    window.addEventListener("scroll", function () {
+      scrollPosition = window.scrollY;
+      if (scrollPosition <= 60 && !nav_list.classList.contains("show")) {
+        header.classList.remove("bg-white-shadow");
+        for (let i = 0; i < nav.length; i++){
+          if (!nav[0].classList.contains("active-without-bg")) {
+            nav[0].classList.add("active-without-bg");
+          }
+          if (nav[i].classList.contains("active-without-bg")) {
+            nav[i].classList.remove("active-without-bg");
+          }
+          nav[i].classList.add("a-without-bg");
+          nav[i].classList.remove("a-with-bg");
+        }
+      } else {
+        header.classList.add("bg-white-shadow");
+        nav[0].classList.add("active");
+        for (let i = 0; i < nav.length; i++) {
+          nav[i].classList.remove("a-without-bg");
+          nav[i].classList.add("a-with-bg");
+          nav[i].classList.remove("active-without-bg");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
