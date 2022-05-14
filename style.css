@@ -541,12 +541,24 @@ button.next-gallery img:hover, button.before-gallery img:hover{
   align-items: center;
   justify-content: center;
 }
+.visi, .value-misi, .value-tujuan{
+  flex-basis: unset;
+  margin-left: 1em;
+  width: 70%;
+}
+.visi-item .title h2, .misi-item .title h2, .tujuan-item .title h2{
+  margin-top: 0;
+}
 .visi-item .title, .misi-item .title, .tujuan-item .title{
   text-align: center;
   color: var(--blue);
-  width: 40em;
+  width: 30%;
+}
+.visi, .value-misi, .value-tujuan{
+  padding-left: 0;
 }
 .visi li, .value-misi li, .value-tujuan li{
+  padding-left: 0;
   list-style: decimal;
   margin-bottom: 0.5em;
 }
@@ -1031,8 +1043,7 @@ button.next-gallery img:hover, button.before-gallery img:hover{
     width: 100%;
   }
   .visi, .value-misi, .value-tujuan{
-    flex-basis: unset;
-    margin-left: 1em;
+    width: 100%;
   }
   .visi li, .value-misi li, .value-tujuan li{
     list-style: decimal;
