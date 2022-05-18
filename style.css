@@ -1044,7 +1044,7 @@ button.next-gallery img:hover, button.before-gallery img:hover{
     transform: scaleX(-1);
   }
   .documentation-image{
-    height: 8em;
+    height: 13em;
   }
   .about-activity{
     padding: 1em;
