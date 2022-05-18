@@ -11,7 +11,7 @@ const body = document.getElementsByTagName("BODY")[0];
 
 window.addEventListener("scroll", function () {
 	scrollPosition = window.scrollY;
-	if (scrollPosition <= 60) {
+	if (scrollPosition <= 60 && !nav_list.classList.contains("show")) {
 		header.classList.remove("bg-white-shadow");
 	} else {
 		header.classList.add("bg-white-shadow");
