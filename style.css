@@ -105,14 +105,9 @@ button:hover{
 header #nav-left{
   display: flex;
 }
-header .logo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
 header img{
   margin-right: 0.5em;
-  height: 4em;
+  height: 3.5em;
 }
 header{
   position: fixed;
