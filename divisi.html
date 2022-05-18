@@ -23,10 +23,10 @@
     </div>
     <nav class="nav-list" id="nav-list">
       <ul>
-        <li><a href="home.html" class="a-without-bg">Beranda</a></li>
-        <li><a href="divisi.html" class="a-without-bg active-without-bg">Divisi</a></li>
-        <li><a href="kalender.html" class="a-without-bg">Kalender</a></li>
-        <li><a href="kotaksaran.html" class="a-without-bg">Kotak Saran</a></li>
+        <li><a href="home.html" class="">Beranda</a></li>
+        <li><a href="divisi.html" class="active">Divisi</a></li>
+        <li><a href="kalender.html" class="">Kalender</a></li>
+        <li><a href="kotaksaran.html" class="">Kotak Saran</a></li>
       </ul>
       <button>
         Login
@@ -525,31 +525,5 @@
     </section>
   </div>
   <script src="script.js"></script>
-  <script>
-    window.addEventListener("scroll", function () {
-      scrollPosition = window.scrollY;
-      if (scrollPosition <= 60 && !nav_list.classList.contains("show")) {
-        header.classList.remove("bg-white-shadow");
-        for (let i = 0; i < nav.length; i++){
-          if (!nav[1].classList.contains("active-without-bg")) {
-            nav[1].classList.add("active-without-bg");
-          }
-          if (nav[i].classList.contains("active-without-bg")) {
-            nav[i].classList.remove("active-without-bg");
-          }
-          nav[i].classList.add("a-without-bg");
-          nav[i].classList.remove("a-with-bg");
-        }
-      } else {
-        header.classList.add("bg-white-shadow");
-        nav[1].classList.add("active");
-        for (let i = 0; i < nav.length; i++) {
-          nav[i].classList.remove("a-without-bg");
-          nav[i].classList.add("a-with-bg");
-          nav[i].classList.remove("active-without-bg");
-        }
-      }
-    });
-  </script>
 </body>
 </html>

@@ -9,6 +9,15 @@ const loginBtn = document.getElementById("button-login");
 const closeModal = document.getElementsByClassName("close")[0];
 const body = document.getElementsByTagName("BODY")[0];
 
+window.addEventListener("scroll", function () {
+	scrollPosition = window.scrollY;
+	if (scrollPosition <= 60) {
+		header.classList.remove("bg-white-shadow");
+	} else {
+		header.classList.add("bg-white-shadow");
+	}
+});
+
 function detectIsMobile(){
 	return window.screen.width < 1000;
 }
